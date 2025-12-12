@@ -13,7 +13,7 @@ services:
       sh -c "mkdir -p /usr/local/apache2/htdocs/admin &&
              echo 'Czesc Piotrek,' > /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
              echo '' >> /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
-             echo 'Zgodnie z prosba dzialu bezpieczenstwa zrzucilem slowniki do logowania ssh w tym katalogu.' >> /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
+             echo 'Zgodnie z prosba dzialu bezpieczenstwa zrzucilem slowniki z haslami ssh w tym katalogu. Login to PiotrekAdmin' >> /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
              echo 'Nie zapomnij ich usunac po testach penetracyjnych!' >> /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
              echo '' >> /usr/local/apache2/htdocs/admin/przypomnienie.txt &&
              
@@ -26,12 +26,6 @@ services:
              echo 'warsztaty' >> /usr/local/apache2/htdocs/admin/hasla.txt &&
              echo 'admin123' >> /usr/local/apache2/htdocs/admin/hasla.txt &&
              echo 'qwerty' >> /usr/local/apache2/htdocs/admin/hasla.txt &&
-             
-             echo 'admin' > /usr/local/apache2/htdocs/admin/loginy.txt &&
-             echo 'root' >> /usr/local/apache2/htdocs/admin/loginy.txt &&
-             echo 'support' >> /usr/local/apache2/htdocs/admin/loginy.txt &&
-             echo 'PiotrekAdmin' >> /usr/local/apache2/htdocs/admin/loginy.txt &&
-             echo 'user' >> /usr/local/apache2/htdocs/admin/loginy.txt &&
              
              echo '<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>CorpSec Intranet</title><style>body{background-color:#f4f6f9;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}.container{background:white;padding:40px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);text-align:center;width:400px}h1{color:#2c3e50;margin-bottom:10px}.logo{font-size:40px;margin-bottom:20px}input{width:100%;padding:10px;margin:10px 0;border:1px solid #ddd;border-radius:5px;box-sizing:border-box}.btn{width:100%;padding:10px;background-color:#3498db;color:white;border:none;border-radius:5px;cursor:pointer;font-size:16px}.btn:hover{background-color:#2980b9}.footer{margin-top:20px;font-size:12px;color:#7f8c8d}.debug{margin-top:30px;font-size:10px;color:#bdc3c7;border-top:1px solid #eee;padding-top:10px}</style></head><body><div class=\"container\"><div class=\"logo\">🏢</div><h1>CorpSec Intranet</h1><p>Zaloguj się do systemu</p><form><input type=\"text\" placeholder=\"Login\" disabled><input type=\"password\" placeholder=\"Hasło\" disabled><button class=\"btn\" disabled>System w konserwacji</button></form><div class=\"footer\">&copy; 2025 CorpSec IT Dept.</div><div class=\"debug\">[DEBUG] Katalog publiczny /admin jest widoczny w sieci lokalnej. Proszę zabezpieczyć.</div></div></body></html>' > /usr/local/apache2/htdocs/index.html &&
              httpd-foreground"
